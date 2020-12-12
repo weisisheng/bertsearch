@@ -54,7 +54,7 @@ $ export INDEX_NAME=jobsearch
 $ docker-compose up
 ```
 
-**CAUTION**: If possible, assign high memory(more than `8GB`) to Docker's memory configuration because BERT container needs high memory.
+**CAUTION**: If possible, assign high memory (more than `8GB`) to Docker's memory configuration because a BERT container needs high memory.
 
 ### 4. Create index
 
@@ -95,11 +95,11 @@ $ python example/create_index.py --index_file=example/index.json --index_name=jo
 }
 ```
 
-**CAUTION**: The `dims` value of `text_vector` must need to match the dims of a pretrained BERT model.
+**CAUTION**: The `dims` value of `text_vector` must match the dims of a pretrained BERT model.
 
 ### 5. Create documents
 
-Once you created an index, you’re ready to index some document. The point here is to convert your document into a vector using BERT. The resulting vector is stored in the `text_vector` field. Let`s convert your data into a JSON document:
+Once you created an index, you’re ready to index some documents. The point here is to convert your document into a vector using BERT. The resulting vector is stored in the `text_vector` field. Let`s convert your data into a JSON document:
 
 ```bash
 $ python example/create_documents.py --data=example/example.csv --index_name=jobsearch
@@ -112,7 +112,7 @@ $ python example/create_documents.py --data=example/example.csv --index_name=job
 "Network Administrator","lorem ipsum"
 ```
 
-After finishing the script, you can get a JSON document like follows:
+After finishing the script, you can get a JSON document as follows:
 
 ```python
 # documents.jsonl
@@ -124,7 +124,7 @@ After finishing the script, you can get a JSON document like follows:
 
 ### 6. Index documents
 
-After converting your data into a JSON, you can adds a JSON document to the specified index and makes it searchable.
+After converting your data into a JSON, you can add a JSON document to the specified index and make it searchable.
 
 ```bash
 $ python example/index_documents.py
